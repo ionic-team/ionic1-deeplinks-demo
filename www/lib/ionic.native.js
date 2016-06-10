@@ -45,6 +45,8 @@ var datepicker_1 = require('./plugins/datepicker');
 exports.DatePicker = datepicker_1.DatePicker;
 var dbmeter_1 = require('./plugins/dbmeter');
 exports.DBMeter = dbmeter_1.DBMeter;
+var deeplinks_1 = require('./plugins/deeplinks');
+exports.Deeplinks = deeplinks_1.Deeplinks;
 var device_1 = require('./plugins/device');
 exports.Device = device_1.Device;
 var deviceaccounts_1 = require('./plugins/deviceaccounts');
@@ -145,6 +147,7 @@ window['IonicNative'] = {
     Contacts: contacts_1.Contacts,
     DatePicker: datepicker_1.DatePicker,
     DBMeter: dbmeter_1.DBMeter,
+    Deeplinks: deeplinks_1.Deeplinks,
     Device: device_1.Device,
     DeviceAccounts: deviceaccounts_1.DeviceAccounts,
     DeviceMotion: devicemotion_1.DeviceMotion,
@@ -200,7 +203,7 @@ setTimeout(function () {
     }
 }, DEVICE_READY_TIMEOUT);
 
-},{"./ng1":2,"./plugins/actionsheet":3,"./plugins/admob":4,"./plugins/appavailability":5,"./plugins/apprate":6,"./plugins/appversion":7,"./plugins/background-geolocation":8,"./plugins/backgroundmode":9,"./plugins/badge":10,"./plugins/barcodescanner":11,"./plugins/base64togallery":12,"./plugins/batterystatus":13,"./plugins/ble":14,"./plugins/bluetoothserial":15,"./plugins/calendar":16,"./plugins/camera":17,"./plugins/card-io":18,"./plugins/clipboard":19,"./plugins/contacts":20,"./plugins/datepicker":21,"./plugins/dbmeter":22,"./plugins/device":23,"./plugins/deviceaccounts":24,"./plugins/devicemotion":25,"./plugins/deviceorientation":26,"./plugins/diagnostic":27,"./plugins/dialogs":28,"./plugins/emailcomposer":29,"./plugins/facebook":30,"./plugins/file":31,"./plugins/filetransfer":32,"./plugins/flashlight":33,"./plugins/geolocation":34,"./plugins/globalization":35,"./plugins/google-plus":36,"./plugins/googleanalytics":37,"./plugins/googlemaps":38,"./plugins/hotspot":39,"./plugins/imagepicker":40,"./plugins/inappbrowser":41,"./plugins/insomnia":42,"./plugins/keyboard":43,"./plugins/launchnavigator":44,"./plugins/localnotifications":45,"./plugins/media":46,"./plugins/network":47,"./plugins/plugin":48,"./plugins/push":49,"./plugins/safari-view-controller":50,"./plugins/screenshot":51,"./plugins/sms":52,"./plugins/socialsharing":53,"./plugins/spinnerdialog":54,"./plugins/splashscreen":55,"./plugins/sqlite":56,"./plugins/statusbar":57,"./plugins/toast":58,"./plugins/touchid":59,"./plugins/vibration":60,"./plugins/webintent":61}],2:[function(require,module,exports){
+},{"./ng1":2,"./plugins/actionsheet":3,"./plugins/admob":4,"./plugins/appavailability":5,"./plugins/apprate":6,"./plugins/appversion":7,"./plugins/background-geolocation":8,"./plugins/backgroundmode":9,"./plugins/badge":10,"./plugins/barcodescanner":11,"./plugins/base64togallery":12,"./plugins/batterystatus":13,"./plugins/ble":14,"./plugins/bluetoothserial":15,"./plugins/calendar":16,"./plugins/camera":17,"./plugins/card-io":18,"./plugins/clipboard":19,"./plugins/contacts":20,"./plugins/datepicker":21,"./plugins/dbmeter":22,"./plugins/deeplinks":23,"./plugins/device":24,"./plugins/deviceaccounts":25,"./plugins/devicemotion":26,"./plugins/deviceorientation":27,"./plugins/diagnostic":28,"./plugins/dialogs":29,"./plugins/emailcomposer":30,"./plugins/facebook":31,"./plugins/file":32,"./plugins/filetransfer":33,"./plugins/flashlight":34,"./plugins/geolocation":35,"./plugins/globalization":36,"./plugins/google-plus":37,"./plugins/googleanalytics":38,"./plugins/googlemaps":39,"./plugins/hotspot":40,"./plugins/imagepicker":41,"./plugins/inappbrowser":42,"./plugins/insomnia":43,"./plugins/keyboard":44,"./plugins/launchnavigator":45,"./plugins/localnotifications":46,"./plugins/media":47,"./plugins/network":48,"./plugins/plugin":49,"./plugins/push":50,"./plugins/safari-view-controller":51,"./plugins/screenshot":52,"./plugins/sms":53,"./plugins/socialsharing":54,"./plugins/spinnerdialog":55,"./plugins/splashscreen":56,"./plugins/sqlite":57,"./plugins/statusbar":58,"./plugins/toast":59,"./plugins/touchid":60,"./plugins/vibration":61,"./plugins/webintent":62}],2:[function(require,module,exports){
 "use strict";
 /**
  * Initialize the ngCordova Angular module if we're running in ng1.
@@ -304,7 +307,7 @@ var ActionSheet = (function () {
 }());
 exports.ActionSheet = ActionSheet;
 
-},{"./plugin":48}],4:[function(require,module,exports){
+},{"./plugin":49}],4:[function(require,module,exports){
 "use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -508,7 +511,7 @@ var AdMob = (function () {
 }());
 exports.AdMob = AdMob;
 
-},{"./plugin":48}],5:[function(require,module,exports){
+},{"./plugin":49}],5:[function(require,module,exports){
 "use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -568,7 +571,7 @@ var AppAvailability = (function () {
 }());
 exports.AppAvailability = AppAvailability;
 
-},{"./plugin":48}],6:[function(require,module,exports){
+},{"./plugin":49}],6:[function(require,module,exports){
 "use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -649,7 +652,7 @@ var AppRate = (function () {
 }());
 exports.AppRate = AppRate;
 
-},{"./plugin":48}],7:[function(require,module,exports){
+},{"./plugin":49}],7:[function(require,module,exports){
 "use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -723,7 +726,7 @@ var AppVersion = (function () {
 }());
 exports.AppVersion = AppVersion;
 
-},{"./plugin":48}],8:[function(require,module,exports){
+},{"./plugin":49}],8:[function(require,module,exports){
 "use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -929,7 +932,7 @@ var BackgroundGeolocation = (function () {
 }());
 exports.BackgroundGeolocation = BackgroundGeolocation;
 
-},{"./plugin":48}],9:[function(require,module,exports){
+},{"./plugin":49}],9:[function(require,module,exports){
 "use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -1027,7 +1030,7 @@ var BackgroundMode = (function () {
 }());
 exports.BackgroundMode = BackgroundMode;
 
-},{"./plugin":48}],10:[function(require,module,exports){
+},{"./plugin":49}],10:[function(require,module,exports){
 "use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -1125,7 +1128,7 @@ var Badge = (function () {
 }());
 exports.Badge = Badge;
 
-},{"./plugin":48}],11:[function(require,module,exports){
+},{"./plugin":49}],11:[function(require,module,exports){
 "use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -1176,7 +1179,7 @@ var BarcodeScanner = (function () {
 }());
 exports.BarcodeScanner = BarcodeScanner;
 
-},{"./plugin":48}],12:[function(require,module,exports){
+},{"./plugin":49}],12:[function(require,module,exports){
 "use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -1225,7 +1228,7 @@ var Base64ToGallery = (function () {
 }());
 exports.Base64ToGallery = Base64ToGallery;
 
-},{"./plugin":48}],13:[function(require,module,exports){
+},{"./plugin":49}],13:[function(require,module,exports){
 "use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -1304,7 +1307,7 @@ var BatteryStatus = (function () {
 }());
 exports.BatteryStatus = BatteryStatus;
 
-},{"./plugin":48}],14:[function(require,module,exports){
+},{"./plugin":49}],14:[function(require,module,exports){
 "use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -1728,7 +1731,7 @@ var BLE = (function () {
 }());
 exports.BLE = BLE;
 
-},{"./plugin":48}],15:[function(require,module,exports){
+},{"./plugin":49}],15:[function(require,module,exports){
 "use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -1982,7 +1985,7 @@ var BluetoothSerial = (function () {
 }());
 exports.BluetoothSerial = BluetoothSerial;
 
-},{"./plugin":48}],16:[function(require,module,exports){
+},{"./plugin":49}],16:[function(require,module,exports){
 "use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -2310,7 +2313,7 @@ var Calendar = (function () {
 }());
 exports.Calendar = Calendar;
 
-},{"./plugin":48}],17:[function(require,module,exports){
+},{"./plugin":49}],17:[function(require,module,exports){
 "use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -2438,7 +2441,7 @@ var Camera = (function () {
 }());
 exports.Camera = Camera;
 
-},{"./plugin":48}],18:[function(require,module,exports){
+},{"./plugin":49}],18:[function(require,module,exports){
 "use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -2510,7 +2513,7 @@ var CardIO = (function () {
 }());
 exports.CardIO = CardIO;
 
-},{"./plugin":48}],19:[function(require,module,exports){
+},{"./plugin":49}],19:[function(require,module,exports){
 "use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -2578,7 +2581,7 @@ var Clipboard = (function () {
 }());
 exports.Clipboard = Clipboard;
 
-},{"./plugin":48}],20:[function(require,module,exports){
+},{"./plugin":49}],20:[function(require,module,exports){
 "use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -2670,7 +2673,7 @@ var Contacts = (function () {
 }());
 exports.Contacts = Contacts;
 
-},{"./plugin":48}],21:[function(require,module,exports){
+},{"./plugin":49}],21:[function(require,module,exports){
 "use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -2727,7 +2730,7 @@ var DatePicker = (function () {
 }());
 exports.DatePicker = DatePicker;
 
-},{"./plugin":48}],22:[function(require,module,exports){
+},{"./plugin":49}],22:[function(require,module,exports){
 "use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -2815,7 +2818,82 @@ var DBMeter = (function () {
 }());
 exports.DBMeter = DBMeter;
 
-},{"./plugin":48}],23:[function(require,module,exports){
+},{"./plugin":49}],23:[function(require,module,exports){
+"use strict";
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var plugin_1 = require('./plugin');
+/**
+ * @name Ionic Deeplinks
+ * @description This plugin handles deeplinks on iOS and Android for both custom URL scheme links
+ * and Universal App Links.
+ *
+ * @usage
+ * ```ts
+ * import {IonicDeeplinks} from 'ionic-native';
+ *
+ * ```
+ */
+var Deeplinks = (function () {
+    function Deeplinks() {
+    }
+    /**
+     * Define a set of paths to match against incoming deeplinks.
+     *
+     * @param {paths} Define a set of paths to match against incoming deeplinks.
+     * paths takes an object of the form { 'path': data }. If a deeplink
+     * matches the path, the resulting path-data pair will be returned in the
+     * promise result which you can then use to navigate in the app as you see fit.
+     * @returns {Promise} Returns a Promise that resolves when a deeplink comes through, and
+     * is rejected if a deeplink comes through that does not match a given path.
+     */
+    Deeplinks.route = function (paths) { return; };
+    /**
+     *
+     * This is a convenience version of `route` that takes a reference to a NavController
+     * from Ionic 2, or a custom class that conforms to this protocol:
+     *
+     * NavController.push = function(View, Params){}
+     *
+     * This handler will automatically navigate when a route matches. If you need finer-grained
+     * control over the behavior of a matching deeplink, use the plain `route` method.
+     *
+     * @param {paths} Define a set of paths to match against incoming deeplinks.
+     * paths takes an object of the form { 'path': data }. If a deeplink
+     * matches the path, the resulting path-data pair will be returned in the
+     * promise result which you can then use to navigate in the app as you see fit.
+     *
+     * @returns {Promise} Returns a Promise that resolves when a deeplink comes through, and
+     * is rejected if a deeplink comes through that does not match a given path.
+     */
+    Deeplinks.routeWithNavController = function (navController, paths) { return; };
+    __decorate([
+        plugin_1.Cordova({
+            observable: true
+        })
+    ], Deeplinks, "route", null);
+    __decorate([
+        plugin_1.Cordova({
+            observable: true
+        })
+    ], Deeplinks, "routeWithNavController", null);
+    Deeplinks = __decorate([
+        plugin_1.Plugin({
+            plugin: 'ionic-plugin-deeplinks',
+            pluginRef: 'IonicDeeplink',
+            repo: 'https://github.com/driftyo/ionic-plugin-deeplinks',
+            platforms: ['iOS', 'Android']
+        })
+    ], Deeplinks);
+    return Deeplinks;
+}());
+exports.Deeplinks = Deeplinks;
+
+},{"./plugin":49}],24:[function(require,module,exports){
 "use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -2865,7 +2943,7 @@ var Device = (function () {
 }());
 exports.Device = Device;
 
-},{"./plugin":48}],24:[function(require,module,exports){
+},{"./plugin":49}],25:[function(require,module,exports){
 "use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -2917,7 +2995,7 @@ var DeviceAccounts = (function () {
 }());
 exports.DeviceAccounts = DeviceAccounts;
 
-},{"./plugin":48}],25:[function(require,module,exports){
+},{"./plugin":49}],26:[function(require,module,exports){
 "use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -3003,7 +3081,7 @@ var DeviceMotion = (function () {
 }());
 exports.DeviceMotion = DeviceMotion;
 
-},{"./plugin":48}],26:[function(require,module,exports){
+},{"./plugin":49}],27:[function(require,module,exports){
 "use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -3061,7 +3139,7 @@ var DeviceOrientation = (function () {
         plugin_1.Cordova({
             callbackOrder: 'reverse',
             observable: true,
-            cancelFunction: 'clearWatch'
+            clearFunction: 'clearWatch'
         })
     ], DeviceOrientation, "watchHeading", null);
     DeviceOrientation = __decorate([
@@ -3075,7 +3153,7 @@ var DeviceOrientation = (function () {
 }());
 exports.DeviceOrientation = DeviceOrientation;
 
-},{"./plugin":48}],27:[function(require,module,exports){
+},{"./plugin":49}],28:[function(require,module,exports){
 "use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -3286,7 +3364,7 @@ var Diagnostic = (function () {
 }());
 exports.Diagnostic = Diagnostic;
 
-},{"./plugin":48}],28:[function(require,module,exports){
+},{"./plugin":49}],29:[function(require,module,exports){
 "use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -3391,7 +3469,7 @@ var Dialogs = (function () {
 }());
 exports.Dialogs = Dialogs;
 
-},{"./plugin":48}],29:[function(require,module,exports){
+},{"./plugin":49}],30:[function(require,module,exports){
 "use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -3496,7 +3574,7 @@ var EmailComposer = (function () {
 }());
 exports.EmailComposer = EmailComposer;
 
-},{"./plugin":48}],30:[function(require,module,exports){
+},{"./plugin":49}],31:[function(require,module,exports){
 "use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -3761,7 +3839,7 @@ var Facebook = (function () {
 }());
 exports.Facebook = Facebook;
 
-},{"./plugin":48}],31:[function(require,module,exports){
+},{"./plugin":49}],32:[function(require,module,exports){
 "use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -4338,7 +4416,7 @@ var File = (function () {
 }());
 exports.File = File;
 
-},{"./plugin":48}],32:[function(require,module,exports){
+},{"./plugin":49}],33:[function(require,module,exports){
 "use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -4436,7 +4514,7 @@ var Transfer = (function () {
 }());
 exports.Transfer = Transfer;
 
-},{"./plugin":48}],33:[function(require,module,exports){
+},{"./plugin":49}],34:[function(require,module,exports){
 "use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -4515,7 +4593,7 @@ var Flashlight = (function () {
 }());
 exports.Flashlight = Flashlight;
 
-},{"./plugin":48}],34:[function(require,module,exports){
+},{"./plugin":49}],35:[function(require,module,exports){
 "use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -4600,7 +4678,7 @@ var Geolocation = (function () {
 }());
 exports.Geolocation = Geolocation;
 
-},{"./plugin":48}],35:[function(require,module,exports){
+},{"./plugin":49}],36:[function(require,module,exports){
 "use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -4751,7 +4829,7 @@ var Globalization = (function () {
 }());
 exports.Globalization = Globalization;
 
-},{"./plugin":48}],36:[function(require,module,exports){
+},{"./plugin":49}],37:[function(require,module,exports){
 "use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -4814,7 +4892,7 @@ var GooglePlus = (function () {
 }());
 exports.GooglePlus = GooglePlus;
 
-},{"./plugin":48}],37:[function(require,module,exports){
+},{"./plugin":49}],38:[function(require,module,exports){
 "use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -4961,7 +5039,7 @@ var GoogleAnalytics = (function () {
 }());
 exports.GoogleAnalytics = GoogleAnalytics;
 
-},{"./plugin":48}],38:[function(require,module,exports){
+},{"./plugin":49}],39:[function(require,module,exports){
 "use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -4973,6 +5051,7 @@ var plugin_1 = require('./plugin');
 var Observable_1 = require('rxjs/Observable');
 var plugin_2 = require('./plugin');
 /**
+ * @private
  * You can listen to these events where appropriate
  */
 exports.GoogleMapsEvent = {
@@ -4995,6 +5074,9 @@ exports.GoogleMapsEvent = {
     MARKER_DRAG_START: 'drag_start',
     MARKER_DRAG_END: 'drag_end'
 };
+/**
+ * @private
+ */
 exports.GoogleMapsAnimation = {
     BOUNCE: 'BOUNCE',
     DROP: 'DROP'
@@ -5346,6 +5428,9 @@ var GoogleMap = (function () {
     return GoogleMap;
 }());
 exports.GoogleMap = GoogleMap;
+/**
+ * @private
+ */
 var GoogleMapsMarker = (function () {
     function GoogleMapsMarker(_objectInstance) {
         this._objectInstance = _objectInstance;
@@ -5546,6 +5631,9 @@ var GoogleMapsMarker = (function () {
     return GoogleMapsMarker;
 }());
 exports.GoogleMapsMarker = GoogleMapsMarker;
+/**
+ * @private
+ */
 var GoogleMapsCircle = (function () {
     function GoogleMapsCircle(_objectInstance) {
         this._objectInstance = _objectInstance;
@@ -5665,6 +5753,9 @@ var GoogleMapsCircle = (function () {
     return GoogleMapsCircle;
 }());
 exports.GoogleMapsCircle = GoogleMapsCircle;
+/**
+ * @private
+ */
 var GoogleMapsPolyline = (function () {
     function GoogleMapsPolyline(_objectInstance) {
         this._objectInstance = _objectInstance;
@@ -5751,6 +5842,9 @@ var GoogleMapsPolyline = (function () {
     return GoogleMapsPolyline;
 }());
 exports.GoogleMapsPolyline = GoogleMapsPolyline;
+/**
+ * @private
+ */
 var GoogleMapsPolygon = (function () {
     function GoogleMapsPolygon(_objectInstance) {
         this._objectInstance = _objectInstance;
@@ -5848,6 +5942,9 @@ var GoogleMapsPolygon = (function () {
     return GoogleMapsPolygon;
 }());
 exports.GoogleMapsPolygon = GoogleMapsPolygon;
+/**
+ * @private
+ */
 var GoogleMapsTileOverlay = (function () {
     function GoogleMapsTileOverlay(_objectInstance) {
         this._objectInstance = _objectInstance;
@@ -5909,6 +6006,9 @@ var GoogleMapsTileOverlay = (function () {
     return GoogleMapsTileOverlay;
 }());
 exports.GoogleMapsTileOverlay = GoogleMapsTileOverlay;
+/**
+ * @private
+ */
 var GoogleMapsGroundOverlay = (function () {
     function GoogleMapsGroundOverlay(_objectInstance) {
         this._objectInstance = _objectInstance;
@@ -5960,6 +6060,9 @@ var GoogleMapsGroundOverlay = (function () {
     return GoogleMapsGroundOverlay;
 }());
 exports.GoogleMapsGroundOverlay = GoogleMapsGroundOverlay;
+/**
+ * @private
+ */
 var GoogleMapsKmlOverlay = (function () {
     function GoogleMapsKmlOverlay(_objectInstance) {
         this._objectInstance = _objectInstance;
@@ -5978,6 +6081,9 @@ var GoogleMapsKmlOverlay = (function () {
     return GoogleMapsKmlOverlay;
 }());
 exports.GoogleMapsKmlOverlay = GoogleMapsKmlOverlay;
+/**
+ * @private
+ */
 var GoogleMapsLatLng = (function () {
     function GoogleMapsLatLng(lat, lng) {
         this.lat = lat;
@@ -6003,7 +6109,7 @@ var GoogleMapsLatLng = (function () {
 }());
 exports.GoogleMapsLatLng = GoogleMapsLatLng;
 
-},{"./plugin":48,"rxjs/Observable":63}],39:[function(require,module,exports){
+},{"./plugin":49,"rxjs/Observable":64}],40:[function(require,module,exports){
 "use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -6261,7 +6367,7 @@ var Hotspot = (function () {
 }());
 exports.Hotspot = Hotspot;
 
-},{"./plugin":48}],40:[function(require,module,exports){
+},{"./plugin":49}],41:[function(require,module,exports){
 "use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -6318,7 +6424,7 @@ var ImagePicker = (function () {
 }());
 exports.ImagePicker = ImagePicker;
 
-},{"./plugin":48}],41:[function(require,module,exports){
+},{"./plugin":49}],42:[function(require,module,exports){
 "use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -6354,7 +6460,7 @@ var InAppBrowser = (function () {
 }());
 exports.InAppBrowser = InAppBrowser;
 
-},{"./plugin":48}],42:[function(require,module,exports){
+},{"./plugin":49}],43:[function(require,module,exports){
 "use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -6417,7 +6523,7 @@ var Insomnia = (function () {
 }());
 exports.Insomnia = Insomnia;
 
-},{"./plugin":48}],43:[function(require,module,exports){
+},{"./plugin":49}],44:[function(require,module,exports){
 "use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -6511,7 +6617,7 @@ var Keyboard = (function () {
 }());
 exports.Keyboard = Keyboard;
 
-},{"./plugin":48}],44:[function(require,module,exports){
+},{"./plugin":49}],45:[function(require,module,exports){
 "use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -6569,7 +6675,7 @@ var LaunchNavigator = (function () {
 }());
 exports.LaunchNavigator = LaunchNavigator;
 
-},{"./plugin":48}],45:[function(require,module,exports){
+},{"./plugin":49}],46:[function(require,module,exports){
 "use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -6793,7 +6899,7 @@ var LocalNotifications = (function () {
 }());
 exports.LocalNotifications = LocalNotifications;
 
-},{"./plugin":48}],46:[function(require,module,exports){
+},{"./plugin":49}],47:[function(require,module,exports){
 "use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -6988,7 +7094,7 @@ var MediaError = (function () {
 }());
 exports.MediaError = MediaError;
 
-},{"./plugin":48}],47:[function(require,module,exports){
+},{"./plugin":49}],48:[function(require,module,exports){
 "use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -7131,7 +7237,7 @@ var Connection = (function () {
 }());
 exports.Connection = Connection;
 
-},{"./plugin":48}],48:[function(require,module,exports){
+},{"./plugin":49}],49:[function(require,module,exports){
 "use strict";
 var util_1 = require('../util');
 var Observable_1 = require('rxjs/Observable');
@@ -7476,7 +7582,7 @@ function InstanceProperty(target, key, descriptor) {
 }
 exports.InstanceProperty = InstanceProperty;
 
-},{"../util":62,"rxjs/Observable":63}],49:[function(require,module,exports){
+},{"../util":63,"rxjs/Observable":64}],50:[function(require,module,exports){
 "use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -7550,7 +7656,7 @@ var Push = (function () {
 }());
 exports.Push = Push;
 
-},{"./plugin":48}],50:[function(require,module,exports){
+},{"./plugin":49}],51:[function(require,module,exports){
 "use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -7660,7 +7766,7 @@ var SafariViewController = (function () {
 }());
 exports.SafariViewController = SafariViewController;
 
-},{"./plugin":48}],51:[function(require,module,exports){
+},{"./plugin":49}],52:[function(require,module,exports){
 "use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -7722,7 +7828,7 @@ var Screenshot = (function () {
 }());
 exports.Screenshot = Screenshot;
 
-},{"./plugin":48}],52:[function(require,module,exports){
+},{"./plugin":49}],53:[function(require,module,exports){
 "use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -7774,7 +7880,7 @@ var SMS = (function () {
 }());
 exports.SMS = SMS;
 
-},{"./plugin":48}],53:[function(require,module,exports){
+},{"./plugin":49}],54:[function(require,module,exports){
 "use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -7933,7 +8039,7 @@ var SocialSharing = (function () {
 }());
 exports.SocialSharing = SocialSharing;
 
-},{"./plugin":48}],54:[function(require,module,exports){
+},{"./plugin":49}],55:[function(require,module,exports){
 "use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -7993,7 +8099,7 @@ var SpinnerDialog = (function () {
 }());
 exports.SpinnerDialog = SpinnerDialog;
 
-},{"./plugin":48}],55:[function(require,module,exports){
+},{"./plugin":49}],56:[function(require,module,exports){
 "use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -8048,7 +8154,7 @@ var Splashscreen = (function () {
 }());
 exports.Splashscreen = Splashscreen;
 
-},{"./plugin":48}],56:[function(require,module,exports){
+},{"./plugin":49}],57:[function(require,module,exports){
 "use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -8177,7 +8283,7 @@ var SQLite = (function () {
 }());
 exports.SQLite = SQLite;
 
-},{"./plugin":48}],57:[function(require,module,exports){
+},{"./plugin":49}],58:[function(require,module,exports){
 "use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -8332,7 +8438,7 @@ var StatusBar = (function () {
 }());
 exports.StatusBar = StatusBar;
 
-},{"./plugin":48}],58:[function(require,module,exports){
+},{"./plugin":49}],59:[function(require,module,exports){
 "use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -8482,7 +8588,7 @@ var Toast = (function () {
 }());
 exports.Toast = Toast;
 
-},{"./plugin":48}],59:[function(require,module,exports){
+},{"./plugin":49}],60:[function(require,module,exports){
 "use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -8572,7 +8678,7 @@ var TouchID = (function () {
 }());
 exports.TouchID = TouchID;
 
-},{"./plugin":48}],60:[function(require,module,exports){
+},{"./plugin":49}],61:[function(require,module,exports){
 "use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -8628,7 +8734,7 @@ var Vibration = (function () {
 }());
 exports.Vibration = Vibration;
 
-},{"./plugin":48}],61:[function(require,module,exports){
+},{"./plugin":49}],62:[function(require,module,exports){
 "use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -8697,7 +8803,7 @@ var WebIntent = (function () {
 }());
 exports.WebIntent = WebIntent;
 
-},{"./plugin":48}],62:[function(require,module,exports){
+},{"./plugin":49}],63:[function(require,module,exports){
 "use strict";
 function get(obj, path) {
     for (var i = 0, path = path.split('.'), len = path.length; i < len; i++) {
@@ -8711,7 +8817,7 @@ function get(obj, path) {
 exports.get = get;
 ;
 
-},{}],63:[function(require,module,exports){
+},{}],64:[function(require,module,exports){
 "use strict";
 var root_1 = require('./util/root');
 var toSubscriber_1 = require('./util/toSubscriber');
@@ -8852,7 +8958,7 @@ var Observable = (function () {
 }());
 exports.Observable = Observable;
 
-},{"./util/root":75,"./util/toSubscriber":76,"symbol-observable":67}],64:[function(require,module,exports){
+},{"./util/root":76,"./util/toSubscriber":77,"symbol-observable":68}],65:[function(require,module,exports){
 "use strict";
 exports.empty = {
     isUnsubscribed: true,
@@ -8861,7 +8967,7 @@ exports.empty = {
     complete: function () { }
 };
 
-},{}],65:[function(require,module,exports){
+},{}],66:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || function (d, b) {
     for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
@@ -9111,7 +9217,7 @@ var SafeSubscriber = (function (_super) {
     return SafeSubscriber;
 }(Subscriber));
 
-},{"./Observer":64,"./Subscription":66,"./symbol/rxSubscriber":69,"./util/isFunction":73}],66:[function(require,module,exports){
+},{"./Observer":65,"./Subscription":67,"./symbol/rxSubscriber":70,"./util/isFunction":74}],67:[function(require,module,exports){
 "use strict";
 var isArray_1 = require('./util/isArray');
 var isObject_1 = require('./util/isObject');
@@ -9262,7 +9368,7 @@ var Subscription = (function () {
 }());
 exports.Subscription = Subscription;
 
-},{"./util/UnsubscriptionError":70,"./util/errorObject":71,"./util/isArray":72,"./util/isFunction":73,"./util/isObject":74,"./util/tryCatch":77}],67:[function(require,module,exports){
+},{"./util/UnsubscriptionError":71,"./util/errorObject":72,"./util/isArray":73,"./util/isFunction":74,"./util/isObject":75,"./util/tryCatch":78}],68:[function(require,module,exports){
 (function (global){
 /* global window */
 'use strict';
@@ -9270,7 +9376,7 @@ exports.Subscription = Subscription;
 module.exports = require('./ponyfill')(global || window || this);
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"./ponyfill":68}],68:[function(require,module,exports){
+},{"./ponyfill":69}],69:[function(require,module,exports){
 'use strict';
 
 module.exports = function symbolObservablePonyfill(root) {
@@ -9291,14 +9397,14 @@ module.exports = function symbolObservablePonyfill(root) {
 	return result;
 };
 
-},{}],69:[function(require,module,exports){
+},{}],70:[function(require,module,exports){
 "use strict";
 var root_1 = require('../util/root');
 var Symbol = root_1.root.Symbol;
 exports.$$rxSubscriber = (typeof Symbol === 'function' && typeof Symbol.for === 'function') ?
     Symbol.for('rxSubscriber') : '@@rxSubscriber';
 
-},{"../util/root":75}],70:[function(require,module,exports){
+},{"../util/root":76}],71:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || function (d, b) {
     for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
@@ -9321,30 +9427,30 @@ var UnsubscriptionError = (function (_super) {
 }(Error));
 exports.UnsubscriptionError = UnsubscriptionError;
 
-},{}],71:[function(require,module,exports){
+},{}],72:[function(require,module,exports){
 "use strict";
 // typeof any so that it we don't have to cast when comparing a result to the error object
 exports.errorObject = { e: {} };
 
-},{}],72:[function(require,module,exports){
+},{}],73:[function(require,module,exports){
 "use strict";
 exports.isArray = Array.isArray || (function (x) { return x && typeof x.length === 'number'; });
 
-},{}],73:[function(require,module,exports){
+},{}],74:[function(require,module,exports){
 "use strict";
 function isFunction(x) {
     return typeof x === 'function';
 }
 exports.isFunction = isFunction;
 
-},{}],74:[function(require,module,exports){
+},{}],75:[function(require,module,exports){
 "use strict";
 function isObject(x) {
     return x != null && typeof x === 'object';
 }
 exports.isObject = isObject;
 
-},{}],75:[function(require,module,exports){
+},{}],76:[function(require,module,exports){
 (function (global){
 "use strict";
 var objectTypes = {
@@ -9365,7 +9471,7 @@ if (freeGlobal && (freeGlobal.global === freeGlobal || freeGlobal.window === fre
 }
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],76:[function(require,module,exports){
+},{}],77:[function(require,module,exports){
 "use strict";
 var Subscriber_1 = require('../Subscriber');
 var rxSubscriber_1 = require('../symbol/rxSubscriber');
@@ -9385,7 +9491,7 @@ function toSubscriber(nextOrObserver, error, complete) {
 }
 exports.toSubscriber = toSubscriber;
 
-},{"../Subscriber":65,"../symbol/rxSubscriber":69}],77:[function(require,module,exports){
+},{"../Subscriber":66,"../symbol/rxSubscriber":70}],78:[function(require,module,exports){
 "use strict";
 var errorObject_1 = require('./errorObject');
 var tryCatchTarget;
@@ -9405,4 +9511,4 @@ function tryCatch(fn) {
 exports.tryCatch = tryCatch;
 ;
 
-},{"./errorObject":71}]},{},[1]);
+},{"./errorObject":72}]},{},[1]);

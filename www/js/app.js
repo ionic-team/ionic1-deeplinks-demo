@@ -21,6 +21,26 @@ angular.module('starter', ['ionic', 'ionic.native', 'starter.controllers', 'star
   });
 })
 
+.run(['$ionicPlatform', '$cordovaDeeplinks', '$state', '$timeout', function($ionicPlatform, $cordovaDeeplinks, $state, $timeout) {
+  $ionicPlatform.ready(function() {
+    $cordovaDeeplinks.route({
+      '/product/:productId': {
+        target: 'product',
+        parent: 'products'
+      }
+    }).subscribe(function(match) {
+      $timeout(function() {
+        $state.go(match.$route.parent, match.$args);
+        $timeout(function() {
+          $state.go(match.$route.target, match.$args);
+        }, 800);
+      }, 100);
+    }, function(nomatch) {
+      console.warn('No match', nomatch);
+    });
+  });
+}])
+
 .config(function($stateProvider, $urlRouterProvider) {
 
   // Ionic uses AngularUI Router which uses the concept of states
@@ -29,55 +49,18 @@ angular.module('starter', ['ionic', 'ionic.native', 'starter.controllers', 'star
   // Each state's controller can be found in controllers.js
   $stateProvider
 
-  // setup an abstract state for the tabs directive
-    .state('tab', {
-    url: '/tab',
-    abstract: true,
-    templateUrl: 'templates/tabs.html'
+  .state('product', {
+    url: '/product/:productId',
+    templateUrl: 'templates/product.html',
+    controller: 'ProductCtrl'
   })
-
-  // Each tab has its own nav history stack:
-
-  .state('tab.dash', {
-    url: '/dash',
-    views: {
-      'tab-dash': {
-        templateUrl: 'templates/tab-dash.html',
-        controller: 'DashCtrl'
-      }
-    }
-  })
-
-  .state('tab.chats', {
-      url: '/chats',
-      views: {
-        'tab-chats': {
-          templateUrl: 'templates/tab-chats.html',
-          controller: 'ChatsCtrl'
-        }
-      }
-    })
-    .state('tab.chat-detail', {
-      url: '/chats/:chatId',
-      views: {
-        'tab-chats': {
-          templateUrl: 'templates/chat-detail.html',
-          controller: 'ChatDetailCtrl'
-        }
-      }
-    })
-
-  .state('tab.account', {
-    url: '/account',
-    views: {
-      'tab-account': {
-        templateUrl: 'templates/tab-account.html',
-        controller: 'AccountCtrl'
-      }
-    }
+  .state('products', {
+    url: '/product',
+    templateUrl: 'templates/products.html',
+    controller: 'ProductsCtrl'
   });
 
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/tab/dash');
+  $urlRouterProvider.otherwise('/product');
 
 });
